@@ -1,16 +1,14 @@
-version: 2
-updates:
-  # Main repo NPM package
   - package-ecosystem: npm
     directory: '/'
     schedule:
       interval: daily
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 0
     labels:
       - 'automerge'
 
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: 'github-actions'
+    open-pull-requests-limit: 0
     directory: '/'
     schedule:
       interval: 'daily'
